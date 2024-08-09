@@ -2,15 +2,23 @@
 
 import sys
 
-inputArgs = sys.argv 
-i= 1
+def main():
+    if len(sys.argv) != 2:
+        print("none")
+        return
+    
+    input_string = sys.argv[1]
+    
+    if 'z' not in input_string:
+        print("none")
+        return
+    
+    for char in input_string:
+        if char == 'z':
+            print("z",end="")
 
-if len(inputArgs) > 1:
-   
-   repeticao =  inputArgs[1].count("z")
-   while i <= repeticao:
-       print("z", end="")
-       i +=1   
+if __name__ == "__main__":
+    main()
  
      
      
